@@ -18,7 +18,10 @@ public class VoicesFragment extends TweetsListFragment {
         ArrayList<Event> events = new ArrayList<Event>();
 		ArrayList<User> users=new ArrayList<User>();
 
-		Event three = new Event("Asha Holi for education","2/2/2014","Education","Celebrate Holi with Stanford Asha. Festival of colors to raise money for child education "," 450 Serra Mall","Stanford","94305","https://lh4.googleusercontent.com/-ylFo1Ubqxbw/UVTb1Kvpr4I/AAAAAAAAAGo/qDyCuNzulZk/w797-h800-no/HOLI-2013-FLYER-FINAL.jpg", users, "15:00");
+		Event three = new Event(
+				"Asha Holi for education",
+				"2/2/2014","Education",
+				"Celebrate Holi with Stanford Asha. Festival of colors to raise money for child education "," 450 Serra Mall","Stanford","94305","https://lh4.googleusercontent.com/-ylFo1Ubqxbw/UVTb1Kvpr4I/AAAAAAAAAGo/qDyCuNzulZk/w797-h800-no/HOLI-2013-FLYER-FINAL.jpg", users, "15:00");
 		events.add(three);
 
         
