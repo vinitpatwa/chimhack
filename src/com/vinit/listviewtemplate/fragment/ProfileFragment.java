@@ -9,7 +9,7 @@ import android.os.Bundle;
 import com.vinit.listviewtemplate.model.Event;
 import com.vinit.listviewtemplate.model.User;
 
-public class ProfileFragment extends TweetsListFragment {
+public class ProfileFragment extends HomelineFragment {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
