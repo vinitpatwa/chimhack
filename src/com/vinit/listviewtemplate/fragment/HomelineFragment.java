@@ -72,7 +72,7 @@ import com.haarman.listviewanimations.swinginadapters.prepared.SwingBottomInAnim
 			super.onCreate(savedInstanceState);
 
 			ArrayList<Home> tweets = new ArrayList<Home>();
-			adapter = new EventAdapter(getActivity(), tweets);
+//			adapter = new EventAdapter(getActivity(), tweets);
 
 		}
 
