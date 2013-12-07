@@ -3,12 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="5dp"
-    android:paddingBottom="5dp" >
+    android:paddingBottom="5dp"
+    android:background="@drawable/border_frame" >
 
     <ImageView
         android:id="@+id/iv_event_item_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:clickable="true"
         android:focusable="false"
         android:layout_alignParentLeft="true"
@@ -24,8 +25,8 @@
         android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/iv_event_item_image"
-        android:text="Name"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textColor = "#000000"
+        android:text="Name" />
 
     <TextView
         android:id="@+id/tv_event_item_description"
@@ -37,25 +38,27 @@
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/iv_event_item_image"
         android:maxLength="180"
-        android:text="Description"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textColor = "#000000"
+        android:text="Description" />
 
     <ImageView
-        android:id="@+id/ivFb"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_below="@+id/iv_event_item_image"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/tweet" />
-
-    <ImageView
-        android:id="@+id/ivTweets"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:id="@+id/ivStory"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/ivFb"
-        android:src="@drawable/fb" />
+        android:layout_below="@+id/tv_event_item_description"
+        android:layout_marginLeft="19dp"
+        android:src="@drawable/profileimage" />
 
+    <!-- 
+    <VideoView
+        android:id="@+id/vvStory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ivStory"
+        android:layout_below="@+id/tv_event_item_description" />
+     -->
+   
     <TextView
         android:id="@+id/tvTweets"
         android:layout_width="wrap_content"
@@ -69,17 +72,24 @@
         android:id="@+id/tvFbLikes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ivTweets"
-        android:layout_toLeftOf="@+id/ivFb"
+        android:layout_alignBottom="@+id/ivTweets"
+        android:layout_alignRight="@+id/ivTweets"
         android:text="223" />
 
     <ImageView
-        android:id="@+id/ivTweetPic"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/ivFb"
-        android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/ivTweets"/>
+        android:id="@+id/ivTweets"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ivStory"
+        android:src="@drawable/tweet" />
+
+    <ImageView
+        android:id="@+id/ivFb"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignRight="@+id/tv_event_item_name"
+        android:layout_below="@+id/ivStory"
+        android:src="@drawable/fb" />
 
 </RelativeLayout>

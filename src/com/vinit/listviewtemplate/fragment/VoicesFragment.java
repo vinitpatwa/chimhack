@@ -26,14 +26,15 @@ public class VoicesFragment extends TweetsListFragment {
 
         
 		Event two = new Event(
-				"TedWomen 2013",
+				"Vital Voice",
 				"3/2/2014",
 				"Women",
 				"Maya Penn, a 13-year-old CEO, technologist, animator, philanthropist...",
 				"650 Townsend ST","San Francisco",
 				"94107",
-				"http://tedconfblog.files.wordpress.com/2013/12/20131205_mca_7756.jpg", 
+				"http://a2.twimg.com/profile_images/1127839058/VV_Logo_GlobeOnly_chocolateMint_50px_reasonably_small.png", 
 				users, "09:00");
+		two.description = "Maya Penn, a 13-year-old CEO, technologist, animator, philanthropist...";
 		two.fbLikes = 212;
 		two.tweetImageUrl = "http://tedconfblog.files.wordpress.com/2013/12/20131205_mca_7756.jpg?w=1128&h=752";
 		events.add(two);

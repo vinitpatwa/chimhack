@@ -50,7 +50,6 @@ public class EventAdapter extends ArrayAdapter<Event> {
 //		iv_event_item_image.setTag(event.getName());
 		ImageLoader.getInstance().displayImage(event.image, iv_event_item_image);
 		
-		
 		 tv_event_item_name = (TextView) view.findViewById(R.id.tv_event_item_name);
 		 tv_event_item_name.setText(event.getName());
 		 
@@ -59,7 +58,7 @@ public class EventAdapter extends ArrayAdapter<Event> {
 		 
 		 ((TextView) view.findViewById(R.id.tvFbLikes)).setText(Integer.toString(event.fbLikes));
 		 ((TextView) view.findViewById(R.id.tvTweets)).setText(Integer.toString(event.retweets));
-		 ImageView tweetImg = (ImageView) view.findViewById(R.id.ivTweetPic);
+		 ImageView tweetImg = (ImageView) view.findViewById(R.id.ivStory);
 		 if (event.tweetImageUrl != null) {			 
 			 ImageLoader.getInstance().displayImage(event.tweetImageUrl, tweetImg);
 		 } else {
