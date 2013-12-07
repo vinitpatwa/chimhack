@@ -3,10 +3,14 @@ package com.vinit.listviewtemplate;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,8 +24,6 @@ public class EventAdapter extends ArrayAdapter<Event> {
 	TextView tv_event_item_description;
 	TextView tv_event_item_city;
 	TextView tv_event_item_datentime;
-	
-	
 	Event event;
 	ImageLoader imageLoader;
 
@@ -39,7 +41,6 @@ public class EventAdapter extends ArrayAdapter<Event> {
 			LayoutInflater inflator = (LayoutInflater) getContext()
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			view = inflator.inflate(R.layout.event_item, null);
-
 		}
 
 		event = getItem(position);
@@ -61,11 +62,18 @@ public class EventAdapter extends ArrayAdapter<Event> {
 		 ImageView tweetImg = (ImageView) view.findViewById(R.id.ivStory);
 		 if (event.tweetImageUrl != null) {			 
 			 ImageLoader.getInstance().displayImage(event.tweetImageUrl, tweetImg);
+				 tweetImg.setOnClickListener(new OnClickListener(){
+                     @Override
+                     public void onClick(View v) {
+                    	 Intent intent = new Intent(Intent.ACTION_VIEW,
+                    			 Uri.parse("http://www.youtube.com/watch?v=wC22tsjsGbE"));                   
+                     	 v.getContext().startActivity(intent);
+                     }
+				 }
+				);
 		 } else {
 			 tweetImg.setVisibility(ImageView.INVISIBLE);
 		 }
-
-		return view;
+		 return view;
 	}
-
 }

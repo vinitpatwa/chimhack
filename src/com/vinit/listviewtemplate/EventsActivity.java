@@ -29,7 +29,7 @@ public class EventsActivity extends FragmentActivity implements ActionBar.TabLis
 	String user = null;
 
 	public static VoicesFragment rfragment;
-	LeaderProfileFragment pfragment;
+	ProfileFragment pfragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +76,7 @@ public class EventsActivity extends FragmentActivity implements ActionBar.TabLis
 		switch (item.getItemId()){
 		case R.id.compose:
 			Toast.makeText(this, "In CreateEvent", Toast.LENGTH_SHORT).show();
-			startActivityForResult(new Intent(this, CreateEventActivity.class),REQUEST_CODE);
+			startActivityForResult(new Intent(this, CreateEventActivity.class), REQUEST_CODE);
 			return true;
 
 		case R.id.profile:
@@ -94,10 +94,9 @@ public class EventsActivity extends FragmentActivity implements ActionBar.TabLis
 	protected void onActivityResult(int requestCode, int resultCode, Intent data){
 		if(requestCode == REQUEST_CODE){
 			if(resultCode == RESULT_OK){
-				Log.d("DEBUG4","calling fragment");
-				String received_user = data.getExtras().getString("user");
-				if(received_user != null)
-					this.user = received_user;
+				Toast.makeText(this, "composed", Toast.LENGTH_SHORT).show();
+				String tweet = data.getExtras().getString("tweet");
+				rfragment.addTweet(tweet);
 			}
 		}
 
@@ -149,9 +148,9 @@ public class EventsActivity extends FragmentActivity implements ActionBar.TabLis
 		return rfragment;
 	}
 
-	public LeaderProfileFragment getprofileFragment(){
+	public ProfileFragment getprofileFragment(){
 		if(pfragment == null){
-			pfragment = new LeaderProfileFragment();
+			pfragment = new ProfileFragment();
 			Log.d("DEBUG4", "creating profile Fragment");
 		}
 		return pfragment;

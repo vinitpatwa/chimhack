@@ -5,7 +5,6 @@ package com.vinit.listviewtemplate;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.FragmentTransaction;
@@ -15,9 +14,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -49,6 +45,9 @@ public class CreateEventActivity extends Activity implements com.vinit.listviewt
 	EditText et_create_event_city;
 	EditText et_create_event_zipcode;
 
+	EditText etTweet;
+	Button btnPublish;
+
 	DateDialogFragment frag;
 	Button button;
 	Calendar now;
@@ -74,45 +73,23 @@ public class CreateEventActivity extends Activity implements com.vinit.listviewt
 		String seven = et_create_event_zipcode.getText().toString();
 		//"http://www.habitatgsf.org/image/email-images/e-news/volunteerchoice.jpg",users,
 		String eight = bt_create_event_time.getText().toString();
-
-		Event e = new Event(et_create_event_name.getText().toString(), bt_create_event_date.getText().toString(), sp_create_event_category.getSelectedItem().toString(), et_create_event_description.getText().toString(),et_create_event_address.getText().toString(),et_create_event_city.getText().toString(),et_create_event_zipcode.getText().toString(),"http://www.habitatgsf.org/image/email-images/e-news/volunteerchoice.jpg",users,bt_create_event_time.getText().toString());
-		Intent i = new Intent();
-		i.putExtra("event",e);
-		setResult(RESULT_OK, i);
-		finish();
-		Toast.makeText(this,"Created new event", Toast.LENGTH_SHORT).show();
-
 	}
 
+	public void onClickPublish(View view) {
+		Toast.makeText(this, "onpublish", Toast.LENGTH_SHORT).show();
+		Intent i = new Intent();
+		i.putExtra("tweet", etTweet.getText());
+		setResult(RESULT_OK, i);
+		finish();		
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_create_event);
 
-
-		bt_create_event_date = (Button) findViewById(R.id.bt_create_event_date);
-		bt_create_event_time = (Button) findViewById(R.id.bt_create_event_time);
-
-
-
-		
-		now = Calendar.getInstance();
-		bt_create_event_date.setText(String.valueOf(now.get(Calendar.MONTH)+1)+"-"+String.valueOf(now.get(Calendar.DAY_OF_MONTH))+"-"+String.valueOf(now.get(Calendar.YEAR)));
-		bt_create_event_date.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				showDialog();        
-			}
-		});
-
-		bt_create_event_time.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				showTimeDialog();
-			}
-		});
-
+		 etTweet = (EditText) findViewById(R.id.etTweet);
+		 btnPublish = (Button) findViewById(R.id.btnPublish);
 	}
 
 
@@ -162,8 +139,4 @@ public class CreateEventActivity extends Activity implements com.vinit.listviewt
 		Log.d("DEBUG4",String.format("%02d",minute));
 		bt_create_event_time.setText(Integer.toString(hour).concat(":").concat(String.format("%02d",minute)));
 	}
-
-
-
-
 }
