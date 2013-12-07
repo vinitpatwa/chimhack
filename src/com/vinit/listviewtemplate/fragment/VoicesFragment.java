@@ -22,8 +22,8 @@ public class VoicesFragment extends TweetsListFragment {
 		e.image = "http://a2.twimg.com/profile_images/1127839058/VV_Logo_GlobeOnly_chocolateMint_50px_reasonably_small.png";
 		e.tweetImageUrl = "http://images.ted.com/images/ted/203377_254x191.jpg";
 		e.videoUrl= "http://www.ted.com/talks/stacey_kramer_the_best_gift_i_ever_survived.html";
-		e.fbLikes = 23943;
-		e.retweets = 10033;
+		e.fbLikes = 2943;
+		e.retweets = 1033;
 		events.add(e);
 
 		e = new Event();
