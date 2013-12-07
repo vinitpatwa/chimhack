@@ -82,6 +82,8 @@ public class LeaderProfileFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
+            mAdapter = new MyAdapter(getFragmentManager());
+
 //            setContentView(R.layout.activity_leader_profile);
            
 
@@ -125,8 +127,7 @@ public class LeaderProfileFragment extends Fragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-        mAdapter = new MyAdapter(getFragmentManager());
-
+        
 
 
 	}
