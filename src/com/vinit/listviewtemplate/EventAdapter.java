@@ -65,11 +65,6 @@ public class EventAdapter extends ArrayAdapter<Event> {
 				 tweetImg.setOnClickListener(new OnClickListener(){
                      @Override
                      public void onClick(View v) {
-                    	 /*
-                         Toast.makeText(v.getContext(), "onclick", Toast.LENGTH_SHORT).show();
-                         Intent i = new Intent(getContext(), VideoActivity.class);
-                         v.getContext().startActivity(i);
-                         */
                     	 Intent intent = new Intent(Intent.ACTION_VIEW,
                     			 Uri.parse("http://www.youtube.com/watch?v=wC22tsjsGbE"));                   
                      	 v.getContext().startActivity(intent);

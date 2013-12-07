@@ -80,7 +80,8 @@
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_alignRight="@+id/tv_event_item_name"
-        android:layout_below="@+id/ivStory"
+        android:layout_alignTop="@+id/ivTweets"
+        android:layout_marginRight="33dp"
         android:src="@drawable/fb" />
 
 </RelativeLayout>
