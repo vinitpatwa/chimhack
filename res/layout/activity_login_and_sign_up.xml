@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.vinit.listviewtemplate"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <org.taptwo.android.widget.TitleFlowIndicator
+            android:id="@+id/viewflowindic"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:textStyle="bold"
+            app:clipPadding="5dp"
+            app:footerColor="#FF0000"
+            app:footerLineHeight="2dp"
+            app:footerTriangleHeight="10dp"
+            app:selectedColor="#FF0000"
+            app:selectedSize="16sp"
+            app:textColor="#000000"
+            app:textSize="16sp"
+            app:titlePadding="10dp" >
+        </org.taptwo.android.widget.TitleFlowIndicator>
+    </LinearLayout>
+
+    <org.taptwo.android.widget.ViewFlow
+        android:id="@+id/viewflow"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="10dp"
+        android:duplicateParentState="true" >
+    </org.taptwo.android.widget.ViewFlow>
+
+    <Button
+        android:id="@+id/bt_login_and_sign_up_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#3b5898"
+        android:onClick="onLogin"
+        android:text="Sign In"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+</LinearLayout>

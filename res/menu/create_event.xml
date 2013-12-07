@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/compose"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/twitcomposenew"
+        android:title="compose"/>
+
+    <item
+        android:id="@+id/profile"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:icon="@drawable/profileimage"
+        android:title="profile"/>
+
+</menu>

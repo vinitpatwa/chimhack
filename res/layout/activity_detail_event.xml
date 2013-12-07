@@ -1,0 +1,192 @@
+<!-- 
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2" >
+ -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="25dp" >
+
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:alpha="0.5"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#59000000"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/iv_background"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_event_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/iv_image"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="IT Help Event in San Francisco"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/v_undertitle"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/iv_background"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="25dp"
+            android:background="#e0e0e0" />
+
+        <ImageView
+            android:id="@+id/iv_calendar_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/v_undertitle"
+            android:src="@drawable/ic_calendar" />
+
+        <TextView
+            android:id="@+id/tv_date_n_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/v_undertitle"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@+id/iv_calendar_label"
+            android:maxLines="2"
+            android:text="Today @ 6:30pm to 9:30pm" />
+
+        <View
+            android:id="@+id/v_undercalendar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/iv_calendar_label"
+            android:layout_marginTop="0dp"
+            android:background="#e0e0e0" />
+
+        <TextView
+            android:id="@+id/tv_event_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/v_undercalendar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:maxLines="7"
+            android:text="This is a one-of-a-kind holiday adventure into Victorian London -  an elaborate party with hundreds of costumed players performing and interacting with patrons in over 120,000 square feet of theatrically-lit music halls, pubs, dance floors." />
+
+        <View
+            android:id="@+id/v_underdetails"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_event_description"
+            android:layout_marginTop="10dp"
+            android:background="#e0e0e0" />
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_below="@+id/v_underdetails"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp" />
+
+        <View
+            android:id="@+id/v_undermap"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/map"
+            android:layout_marginTop="10dp"
+            android:background="#e0e0e0" />
+
+        <Button
+            android:id="@+id/bt_attend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_date_n_time"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/v_undermap"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#E3E3E3"
+            android:onClick="onAttend"
+            android:text="Attend" />
+
+        <View
+            android:id="@+id/v_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/bt_attend"
+            android:layout_marginTop="40dp" />
+
+        <TextView
+            android:id="@+id/tv_event_detail_attending_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/v_bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="1 Attending" />
+
+        <ListView
+            android:id="@+id/lv_event_attending_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_event_detail_attending_label"
+            android:layout_marginTop="5dp"
+            android:background="#F2F2F2"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:dividerHeight="16dp"
+               android:scrollbarStyle="outsideOverlay"
+            android:fadingEdge="none"
+            android:padding="16dp" >
+        </ListView>
+  
+        <View
+            android:id="@+id/v_bottom_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/lv_event_attending_list"
+            android:layout_marginTop="40dp" />
+
+    </RelativeLayout>
+<!--  
+</ScrollView>
+-->
