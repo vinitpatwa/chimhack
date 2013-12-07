@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 
+import com.vinit.listviewtemplate.fragment.LeaderProfileFragment;
 import com.vinit.listviewtemplate.fragment.ProfileFragment;
 import com.vinit.listviewtemplate.fragment.VoicesFragment;
 import com.vinit.listviewtemplate.model.Event;
@@ -28,7 +29,7 @@ public class EventsActivity extends FragmentActivity implements ActionBar.TabLis
 	String user = null;
 
 	public static VoicesFragment rfragment;
-	ProfileFragment pfragment;
+	LeaderProfileFragment pfragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -54,11 +55,11 @@ public class EventsActivity extends FragmentActivity implements ActionBar.TabLis
 
 		tabVoices = actionBar.newTab().setText("Voices").setTag("voices").setTabListener(this);
 		tabProfile = actionBar.newTab().setText("Profile").setTag("profile").setTabListener(this);
-		tabSurprise = actionBar.newTab().setText("InpireMe").setTag("inspireme").setTabListener(this);
+//		tabSurprise = actionBar.newTab().setText("InpireMe").setTag("inspireme").setTabListener(this);
 
 		actionBar.addTab(tabVoices);
 		actionBar.addTab(tabProfile);
-		actionBar.addTab(tabSurprise);
+//		actionBar.addTab(tabSurprise);
 		actionBar.selectTab(tabVoices);
 	}
 
@@ -129,9 +130,9 @@ public class EventsActivity extends FragmentActivity implements ActionBar.TabLis
 		}else if(tab.getTag() == "profile"){
 			//Set to fragment to Mentions Fragment
 			fts.replace(R.id.fragment_container,getprofileFragment(), "profile");
-		} else if(tab.getTag() == "inspireme"){
-			fts.replace(R.id.fragment_container,getprofileFragment(), "profile");
-			//        	fts.replace(R.id.fragment_container,new OrgListFragment(),"donor");
+//		} else if(tab.getTag() == "inspireme"){
+//			fts.replace(R.id.fragment_container,getprofileFragment(), "profile");
+//			//        	fts.replace(R.id.fragment_container,new OrgListFragment(),"donor");
 		}
 
 		fts.commit();
@@ -147,9 +148,9 @@ public class EventsActivity extends FragmentActivity implements ActionBar.TabLis
 		return rfragment;
 	}
 
-	public ProfileFragment getprofileFragment(){
+	public LeaderProfileFragment getprofileFragment(){
 		if(pfragment == null){
-			pfragment = new ProfileFragment();
+			pfragment = new LeaderProfileFragment();
 			Log.d("DEBUG4", "creating profile Fragment");
 		}
 		return pfragment;
