@@ -15,5 +15,6 @@
     <string name="title_activity_events">EventsActivity</string>
     <string name="select">Food</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_leader_profile">LeaderProfileActivity</string>
 
 </resources>
