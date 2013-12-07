@@ -31,15 +31,15 @@ public final class R {
 		public static final int titlePadding = 0x7f01000a;
 	}
 	public static final class drawable {
-		public static final int icon = 0x7f02000c;
+		public static final int icon = 0x7f02000d;
 	}
 	public static final class id {
-		public static final int fill = 0x7f060001;
-		public static final int stroke = 0x7f060000;
+		public static final int fill = 0x7f040001;
+		public static final int stroke = 0x7f040000;
 	}
 	public static final class string {
-		public static final int app_name = 0x7f050005;
-		public static final int hello = 0x7f050004;
+		public static final int app_name = 0x7f050001;
+		public static final int hello = 0x7f050000;
 	}
 	public static final class styleable {
 		public static final int[] CircleFlowIndicator = { 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009 };

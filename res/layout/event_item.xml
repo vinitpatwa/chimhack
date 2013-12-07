@@ -40,24 +40,46 @@
         android:text="Description"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/tv_event_item_city"
+    <ImageView
+        android:id="@+id/ivFb"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_event_item_description"
-        android:layout_below="@+id/tv_event_item_description"
-        android:layout_marginTop="5dp"
-        android:text="Your City"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:layout_height="20dp"
+        android:layout_below="@+id/iv_event_item_image"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/tweet" />
+
+    <ImageView
+        android:id="@+id/ivTweets"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/ivFb"
+        android:src="@drawable/fb" />
 
     <TextView
-        android:id="@+id/tv_event_item_datentime"
+        android:id="@+id/tvTweets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tv_event_item_city"
-        android:layout_alignBottom="@+id/tv_event_item_city"
-        android:layout_alignRight="@+id/tv_event_item_name"
-        android:text="date and time"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:layout_alignRight="@+id/ivFb"
+        android:layout_alignTop="@+id/ivFb"
+        android:layout_marginRight="14dp"
+        android:text="456" />
+
+    <TextView
+        android:id="@+id/tvFbLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivTweets"
+        android:layout_toLeftOf="@+id/ivFb"
+        android:text="223" />
+
+    <ImageView
+        android:id="@+id/ivTweetPic"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ivFb"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/ivTweets"/>
 
 </RelativeLayout>
