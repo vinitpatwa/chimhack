@@ -5,22 +5,8 @@ import java.util.ArrayList;
 
 public class Event implements Serializable{
 
-	public Event(String name, String date, String categories,
-			String description, String address, String city, String zipcode,
-			String image,ArrayList<User> users, String time) {
+	public Event() {
 		super();
-		this.name = name;
-		this.date = date;
-		this.categories = categories;
-		this.description = description;
-		this.address = address;
-		this.city = city;
-		this.zipcode = zipcode;
-		this.image = image;
-		this.users = users;
-		this.time = time;
-		
-		
 	}
 	public String getName() {
 		return name;
@@ -78,18 +64,19 @@ public class Event implements Serializable{
 //		this.image = image;
 //	}
 //	
-	String name;
-	String creator;
-	String date;
-	String categories;
+	public String name;
+	public String creator;
+	public String date;
+	public String categories;
 	public String description; 
-	String address;
-	String city;
-	String zipcode;
+	public String address;
+	public String city;
+	public String zipcode;
 	public String image;
-	ArrayList<User> users;
-	String time;
+	public ArrayList<User> users;
+	public String time;
 	public int fbLikes;
 	public int retweets;
 	public String tweetImageUrl;
+	public String videoUrl;
 }

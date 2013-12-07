@@ -48,16 +48,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/tv_event_item_description"
         android:layout_marginLeft="19dp"
-        android:src="@drawable/profileimage" />
-
-    <!-- 
-    <VideoView
-        android:id="@+id/vvStory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/ivStory"
-        android:layout_below="@+id/tv_event_item_description" />
-     -->
+        android:src="@drawable/profileimage"/>
    
     <TextView
         android:id="@+id/tvTweets"
