@@ -11,14 +11,17 @@
     android:layout_height="match_parent"
     android:background="#F2F2F2"
     android:clipToPadding="false"
-    android:divider="@null"
     android:dividerHeight="16dp"
     android:fadingEdge="none"
     android:padding="16dp"
     android:layout_marginTop="0dp"
-    android:scrollbarStyle="outsideOverlay"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" >
+    android:cacheColorHint="@android:color/transparent" 
+    android:divider="@android:color/transparent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true" 
+        >
  </eu.erikw.PullToRefreshListView>
  
 </RelativeLayout>

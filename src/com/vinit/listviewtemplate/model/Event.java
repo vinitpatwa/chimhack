@@ -82,12 +82,14 @@ public class Event implements Serializable{
 	String creator;
 	String date;
 	String categories;
-	String description; 
+	public String description; 
 	String address;
 	String city;
 	String zipcode;
-	String image;
+	public String image;
 	ArrayList<User> users;
 	String time;
-	
+	public int fbLikes;
+	public int retweets;
+	public String tweetImageUrl;
 }

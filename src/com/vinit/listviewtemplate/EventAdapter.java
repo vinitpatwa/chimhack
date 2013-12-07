@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.vinit.listviewtemplate.model.Event;
 
 public class EventAdapter extends ArrayAdapter<Event> {
@@ -48,21 +47,23 @@ public class EventAdapter extends ArrayAdapter<Event> {
 		iv_event_item_image = (ImageView) view
 				.findViewById(R.id.iv_event_item_image);
 //		ImageLoader.getInstance().displayImage(event.getImage(), iv_event_item_image);
-		iv_event_item_image.setTag(event.getName());
-		
+//		iv_event_item_image.setTag(event.getName());
+		ImageLoader.getInstance().displayImage(event.image, iv_event_item_image);
 		
 		 tv_event_item_name = (TextView) view.findViewById(R.id.tv_event_item_name);
 		 tv_event_item_name.setText(event.getName());
 		 
 		 tv_event_item_description = (TextView) view.findViewById(R.id.tv_event_item_description);
-		 tv_event_item_description.setText(event.getDescription());
+		 tv_event_item_description.setText(event.getDescription());		 
 		 
-		 tv_event_item_city = (TextView) view.findViewById(R.id.tv_event_item_city);
-		 tv_event_item_city.setText(event.getCity());
-		 
-		 tv_event_item_datentime = (TextView) view.findViewById(R.id.tv_event_item_datentime);
-		 tv_event_item_datentime.setText(event.getDate()+" "+event.getTime());
-		 
+		 ((TextView) view.findViewById(R.id.tvFbLikes)).setText(Integer.toString(event.fbLikes));
+		 ((TextView) view.findViewById(R.id.tvTweets)).setText(Integer.toString(event.retweets));
+		 ImageView tweetImg = (ImageView) view.findViewById(R.id.ivStory);
+		 if (event.tweetImageUrl != null) {			 
+			 ImageLoader.getInstance().displayImage(event.tweetImageUrl, tweetImg);
+		 } else {
+			 tweetImg.setVisibility(ImageView.INVISIBLE);
+		 }
 
 		return view;
 	}
