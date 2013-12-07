@@ -56,16 +56,14 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/ivFb"
         android:layout_alignTop="@+id/ivFb"
-        android:layout_marginRight="14dp"
-        android:text="456" />
+        android:layout_marginRight="14dp" />
 
     <TextView
         android:id="@+id/tvFbLikes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/ivTweets"
-        android:layout_alignRight="@+id/ivTweets"
-        android:text="223" />
+        android:layout_alignRight="@+id/ivTweets"/>
 
     <ImageView
         android:id="@+id/ivTweets"

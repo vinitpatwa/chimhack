@@ -79,4 +79,5 @@ public class Event implements Serializable{
 	public int retweets;
 	public String tweetImageUrl;
 	public String videoUrl;
+	public String title;
 }
