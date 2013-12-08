@@ -18,7 +18,7 @@ public class LoginAndSignUpActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setTitle("Daana!");
+		setTitle("Leader's Voice!");
 		setContentView(R.layout.activity_login_and_sign_up);
 				
 		viewFlow = (ViewFlow) findViewById(R.id.viewflow);

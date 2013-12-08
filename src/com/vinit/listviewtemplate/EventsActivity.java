@@ -50,7 +50,7 @@ public class EventsActivity extends FragmentActivity implements ActionBar.TabLis
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		actionBar.setDisplayShowTitleEnabled(true);
 
-		actionBar.setTitle("Dana Events");
+		actionBar.setTitle("Leader's Voice");
 		//        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#880000")));
 
 		tabVoices = actionBar.newTab().setText("Voices").setTag("voices").setTabListener(this);

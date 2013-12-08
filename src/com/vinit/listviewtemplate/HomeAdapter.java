@@ -47,14 +47,15 @@ public class HomeAdapter extends ArrayAdapter<Home> {
 		event = getItem(position);
 
 		image = (ImageView) view.findViewById(R.id.image);
-		
+		ImageLoader.getInstance().displayImage(event.image, image);
+//		ImageLoader.getInstance().displayImage( Uri.parse(event.image, image));
 		
 		
 		name = (TextView) view.findViewById(R.id.name);
 		name.setText(event.name.toString());
 		
 		date = (TextView) view.findViewById(R.id.date);
-		date.setText(event.date.toString());
+		date.setText("");
 
 		description = (TextView) view.findViewById(R.id.description);
 		description.setText(event.description.toString());
