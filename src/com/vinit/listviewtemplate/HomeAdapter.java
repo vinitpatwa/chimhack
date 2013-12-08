@@ -20,11 +20,11 @@ import com.vinit.listviewtemplate.model.Home;
 
 public class HomeAdapter extends ArrayAdapter<Home> {
 
-	ImageView iv_event_item_image;
-	TextView tv_event_item_name;
-	TextView tv_event_item_description;
-	TextView tv_event_item_city;
-	TextView tv_event_item_datentime;
+	ImageView image;
+	TextView name;
+	TextView description;
+	 
+	TextView date;
 	Home event;
 	ImageLoader imageLoader;
 
@@ -41,16 +41,26 @@ public class HomeAdapter extends ArrayAdapter<Home> {
 		if (view == null) {
 			LayoutInflater inflator = (LayoutInflater) getContext()
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			view = inflator.inflate(R.layout.event_item, null);
+			view = inflator.inflate(R.layout.home_item, null);
 		}
 
 		event = getItem(position);
 
-		iv_event_item_image = (ImageView) view
-				.findViewById(R.id.iv_event_item_image);
-//		ImageLoader.getInstance().displayImage(event.getImage(), iv_event_item_image);
-//		iv_event_item_image.setTag(event.getName());
-		ImageLoader.getInstance().displayImage(event.image, iv_event_item_image);
+		image = (ImageView) view.findViewById(R.id.image);
+		
+		
+		
+		name = (TextView) view.findViewById(R.id.name);
+		name.setText(event.name.toString());
+		
+		date = (TextView) view.findViewById(R.id.date);
+		date.setText(event.date.toString());
+
+		description = (TextView) view.findViewById(R.id.description);
+		description.setText(event.description.toString());
+
+
+//		ImageLoader.getInstance().displayImage(event.image, iv_event_item_image);
 		 return view;
 	}
 }

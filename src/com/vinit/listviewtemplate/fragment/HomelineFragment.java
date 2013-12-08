@@ -2,7 +2,6 @@ package com.vinit.listviewtemplate.fragment;
 
 	import java.util.ArrayList;
 
-	import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,15 +10,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-
-	import com.vinit.listviewtemplate.EventAdapter;
-
-	import com.vinit.listviewtemplate.R;
-import com.vinit.listviewtemplate.model.Event;
-import com.vinit.listviewtemplate.model.Home;
-import com.haarman.listviewanimations.itemmanipulation.OnDismissCallback;
-import com.haarman.listviewanimations.itemmanipulation.SwipeDismissAdapter;
 import com.haarman.listviewanimations.swinginadapters.prepared.SwingBottomInAnimationAdapter;
+import com.vinit.listviewtemplate.HomeAdapter;
+import com.vinit.listviewtemplate.R;
+import com.vinit.listviewtemplate.model.Home;
 
 	/**
 	 * Created by vpatwa on 10/28/13.
@@ -28,7 +22,7 @@ import com.haarman.listviewanimations.swinginadapters.prepared.SwingBottomInAnim
 		
 		final int requestCode = 1;
 
-		EventAdapter adapter;
+		HomeAdapter adapter;
 		ListView lv_timeline;
 		SwingBottomInAnimationAdapter swingBottomInAnimationAdapter;
 
@@ -52,7 +46,7 @@ import com.haarman.listviewanimations.swinginadapters.prepared.SwingBottomInAnim
 				public void onItemClick(AdapterView<?> adapterView, View view, int position,
 						long l) {
 				
-					Event event = (Event) lv_timeline.getItemAtPosition(position);
+					Home event = (Home) lv_timeline.getItemAtPosition(position);
 					
 //					Intent i = new Intent(getActivity(), DetailEventActivity.class);
 //					i.putExtra("event", event);
@@ -72,7 +66,7 @@ import com.haarman.listviewanimations.swinginadapters.prepared.SwingBottomInAnim
 			super.onCreate(savedInstanceState);
 
 			ArrayList<Home> tweets = new ArrayList<Home>();
-//			adapter = new EventAdapter(getActivity(), tweets);
+			adapter = new HomeAdapter(getActivity(), tweets);
 
 		}
 
@@ -82,7 +76,7 @@ import com.haarman.listviewanimations.swinginadapters.prepared.SwingBottomInAnim
 
 		}
 
-		public EventAdapter getAdapter() {
+		public HomeAdapter getAdapter() {
 			return adapter;
 		}
 	

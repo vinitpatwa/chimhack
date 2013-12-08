@@ -9,8 +9,11 @@ public class Home implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public Home() {
-		super();
+	public Home(String image, String name, String date, String desciption) {
+		this.image = image;
+		this.name = name;
+		this.date = date;
+		this.description = desciption;
 	}
 	public String name;
 	public String creator;
