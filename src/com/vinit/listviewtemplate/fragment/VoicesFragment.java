@@ -58,7 +58,7 @@ public class VoicesFragment extends TweetsListFragment {
     	Event e = new Event();
     	e.name = "Malala Yousafzai";
     	e.image = "http://t0.gstatic.com/images?q=tbn:ANd9GcRCQqemjazAUictv8WK_PICh5yL54GU9JMZEd19G-bN6dQM8dnR";
-    	e.description = "Pakistanis are resilient people";
+    	e.description = "Malala at chimehack";
     	getAdapter().insert(e, 0);
     }
 
