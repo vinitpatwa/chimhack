@@ -22,14 +22,18 @@ public class AndroidVersionAdapter extends BaseAdapter implements TitleProvider 
 	Map<String, Integer> map = new HashMap<String, Integer>();
 
 	//	private static final Drawable[] images = {
-	private static final String[] names = {"Communities will create Events","Engage Volunteers","Volunteers will Help by Attending","Giving back to Society" };
+	private static final String[] names = {
+		"MU SOCHUA",
+		"MARIA CLAUDIA MENDEZ",
+		"ADIMAIMALAGA TAFUNA'l",
+		"BRIGITTE DZOGBENUKU" };
 
 	public AndroidVersionAdapter(Context context) {
 		mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		map.put("create_event_help", R.drawable.ic_create_event_help);
-		map.put("engage_volunteers", R.drawable.ic_engage_volunteers);
-		map.put("attend_event", R.drawable.ic_attend_event);
-		map.put("help_society", R.drawable.ic_help_society);
+		map.put("create_event_help", R.drawable.leader0);
+		map.put("engage_volunteers", R.drawable.leader1);
+		map.put("attend_event", R.drawable.leader2);
+		map.put("help_society", R.drawable.leader3);
 	}
 
 	@Override
